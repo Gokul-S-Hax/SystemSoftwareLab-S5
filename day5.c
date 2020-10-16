@@ -119,7 +119,7 @@ int getFreqPos(int curr){
     int f1 = 0,max = 99,fmin = min;
     for(int j=0; j<no_of_frames; j++){
         if(a[j] == a[min]){
-            for(int k=0;k<no_of_pages;k++){
+            for(int k=0;k<curr;k++){
                 if(frames[j] == pages[k]){
                     if(max > k){
                         max = k;
