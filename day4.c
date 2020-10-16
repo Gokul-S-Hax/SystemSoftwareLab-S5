@@ -17,8 +17,8 @@ void FCFS(){
     queue_io[0] = init_head;
     int seek = 0;
     printf("\n\nFCFS\n*****\nOrder: ");
-    for(int i=0; i<no_req; i++){
-        if(i < no_req - 1)
+    for(int i=0; i<=no_req; i++){
+        if(i < no_req)
             printf(" %d ==>",queue_io[i]);
         else
             printf(" %d \n",queue_io[i]);
@@ -53,6 +53,7 @@ void SCAN(){
             else
                 printf(" %d \n",queue_io[j]);
         }
+        printf(" 199 ==>");
         for(int j=head_pos+1; j<no_req; j++){
             if(j < no_req - 1)
                 printf(" %d ==>",queue_io[j]);
@@ -66,6 +67,7 @@ void SCAN(){
             else
                 printf(" %d \n",queue_io[j]);
         }
+        printf(" 199 ==>");
         for(int j=head_pos; j>=1; j--){
             if(j < no_req - 1)
                 printf(" %d ==>",queue_io[j]);
@@ -122,8 +124,8 @@ void CSCAN(){
     queue_io[0]=init_head;
 
     printf("\n\nCSCAN\n*****\nOrder: ");
-    for(j=0;j<=no_req+1;j++){
-        if(j < no_req + 1)
+    for(j=0;j<=no_req + 2;j++){
+        if(j < no_req + 2)
             printf(" %d ==>",queue_io[j]);
         else
             printf(" %d \n",queue_io[j]);
