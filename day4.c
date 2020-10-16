@@ -125,11 +125,12 @@ void CSCAN(){
 
     printf("\n\nCSCAN\n*****\nOrder: ");
     for(j=0;j<=no_req + 2;j++){
-        if(j < no_req + 2)
+        if(j < no_req + 2){
             printf(" %d ==>",queue_io[j]);
+            seek += abs(queue_io[j+1]-queue_io[j]);
+        }
         else
             printf(" %d \n",queue_io[j]);
-        seek += abs(queue_io[j+1]-queue_io[j]);
     }
     printf("Total Seek time: %d\nAverage Seek time: %.2f\n\n",seek,seek/(float)no_req);
 }
