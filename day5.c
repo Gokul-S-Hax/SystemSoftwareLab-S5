@@ -2,14 +2,14 @@
 #include <stdlib.h>
 int no_of_frames, no_of_pages, pages[30], frames[10];
 void accept_values(){
-    printf("Enter number of frames: ");
+	printf("Enter number of frames: ");
 	scanf("%d", &no_of_frames);
 	printf("Enter number of pages: ");
 	scanf("%d", &no_of_pages);
-	printf("Enter reference string: ");
-    for(int i = 0; i < no_of_pages; i++){
-    	scanf("%d", &pages[i]);
-    }
+	printf("Enter values of page: ");
+	for(int i = 0; i < no_of_pages; i++){
+	scanf("%d", &pages[i]);
+}
 }
 int findLRU(int time[], int n){
 	int i, minimum = time[0], pos = 0;
