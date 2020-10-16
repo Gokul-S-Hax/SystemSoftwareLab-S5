@@ -18,11 +18,12 @@ void FCFS(){
     int seek = 0;
     printf("\n\nFCFS\n*****\nOrder: ");
     for(int i=0; i<=no_req; i++){
-        if(i < no_req)
+        if(i < no_req){
             printf(" %d ==>",queue_io[i]);
-        else
+            seek += abs(queue_io[i]-queue_io[i+1]);
+        }else
             printf(" %d \n",queue_io[i]);
-        seek += abs(queue_io[i]-queue_io[i+1]);
+        
     }
     printf("Total Seek time: %d\nAverage Seek time: %.2f\n\n",seek,(float)seek/no_req);
 }
